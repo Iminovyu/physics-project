@@ -23,7 +23,7 @@ const Index = () => {
               </h1>
               
               <p className="text-lg md:text-xl mb-8 text-ash-700 max-w-2xl mx-auto">
-                Пройдите наш тест из 15 вопросов и проверьте, насколько хорошо вы знаете основные законы и принципы физики.
+                Пройдите наш тест из 15 вопросов и проверьте, насколько хорошо вы знаете полу проводники в физике.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
