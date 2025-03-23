@@ -1,0 +1,129 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 20 100% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 35 100% 50%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 16 100% 50%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-md bg-white/10 border border-white/20 shadow-lg;
+  }
+  
+  .glass-nav {
+    @apply backdrop-blur-lg bg-white/80 border-b border-white/20 shadow-sm;
+  }
+  
+  .lava-gradient-text {
+    @apply bg-gradient-lava bg-clip-text text-transparent;
+  }
+  
+  .ember-gradient-text {
+    @apply bg-gradient-ember bg-clip-text text-transparent;
+  }
+  
+  .lava-button {
+    @apply px-6 py-3 bg-gradient-lava text-white font-medium rounded-lg 
+           shadow-md hover:shadow-lg transition-all duration-300 ease-in-out 
+           hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-lava-500;
+  }
+  
+  .ember-button {
+    @apply px-6 py-3 bg-gradient-ember text-ash-900 font-medium rounded-lg 
+           shadow-md hover:shadow-lg transition-all duration-300 ease-in-out 
+           hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-ember-500;
+  }
+  
+  .ash-button {
+    @apply px-6 py-3 bg-gradient-ash text-white font-medium rounded-lg 
+           shadow-md hover:shadow-lg transition-all duration-300 ease-in-out 
+           hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-ash-500;
+  }
+  
+  .question-card {
+    @apply bg-gradient-card rounded-xl p-6 shadow-lg border border-white/10 
+           backdrop-blur-sm transition-all duration-300 hover:shadow-xl;
+  }
+  
+  .answer-option {
+    @apply px-4 py-3 rounded-lg border border-ash-200 bg-white/80 shadow-sm 
+           hover:shadow-md transition-all duration-200 ease-in-out text-left 
+           hover:bg-white hover:border-ember-300 flex items-center gap-3;
+  }
+  
+  .answer-option.correct {
+    @apply bg-green-100 border-green-300 text-green-800;
+  }
+  
+  .answer-option.incorrect {
+    @apply bg-red-100 border-red-300 text-red-800;
+  }
+  
+  .answer-option.selected {
+    @apply border-lava-500 bg-lava-50 text-lava-900;
+  }
+  
+  .page-transition {
+    @apply animate-fade-in;
+  }
+  
+  .avatar-glow {
+    @apply animate-glow;
+  }
+  
+  .floating-element {
+    @apply animate-float;
+  }
+}
